@@ -120,7 +120,7 @@ void display() {
 	glutSwapBuffers();
 }
 
-void special(int key, int x, int y) {
+void special(unsigned char key, int x, int y) {
 	switch (key) {
 	case GLUT_KEY_F1:
 		mode = 0;
@@ -192,7 +192,7 @@ int main(int argc, char *argv[]) {
 
 	if (init_resources()) {
 		glutDisplayFunc(display);
-		glutSpecialFunc(special);
+		glutKeyboardFunc(special);
 		glutMainLoop();
 	}
 
